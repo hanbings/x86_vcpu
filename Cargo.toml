@@ -22,6 +22,6 @@ axaddrspace = { git = "https://github.com/arceos-hypervisor/axaddrspace.git" }
 axvcpu = { git = "https://github.com/arceos-hypervisor/axvcpu.git" }
 
 [features]
-default = ["vmx"]
+default = ["vmx", "svm"]
 vmx = []
-amd = []
+svm = []
