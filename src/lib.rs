@@ -27,8 +27,8 @@ cfg_if::cfg_if! {
 }
 
 cfg_if::cfg_if! {
-    if #[cfg(feature = "svm")] {
-        mod svm;
+    if #[cfg(feature = "svm")]{
+        pub mod svm;
     }
 }
 
