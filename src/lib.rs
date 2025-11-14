@@ -1,7 +1,5 @@
 #![no_std]
 #![feature(doc_cfg)]
-#![feature(concat_idents)]
-#![feature(naked_functions)]
 #![doc = include_str!("../README.md")]
 
 #[macro_use]
@@ -9,11 +7,13 @@ extern crate log;
 
 extern crate alloc;
 
+#[cfg(test)]
+mod test_utils;
+
 pub(crate) mod msr;
 #[macro_use]
 pub(crate) mod regs;
 mod ept;
-mod frame;
 
 cfg_if::cfg_if! {
     if #[cfg(feature = "vmx")] {
